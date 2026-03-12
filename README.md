@@ -112,10 +112,4 @@ All APIs are **tested using Postman**.
 
 ---
 
-## 👩‍💻 Author
-
-**Sneha H S**
-Final Year CSE Student
-GMIT Davanagere
-*collaborative team project sprint**.
 
