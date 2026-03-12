@@ -35,7 +35,7 @@ The objective of **EduTrack** is to simplify academic management by providing a 
 * 📊 Marks and Grade Management
 * 📝 Assignment Submission and Tracking
 * 📈 Student Performance Dashboard
-* 📢 Notifications and Announcements
+* 📢 Notifications 
 * 🔒 Secure Authentication System
 
 ---
@@ -50,7 +50,6 @@ The system database includes the following core tables:
 * Attendance
 * Assignments
 * Marks
-* Announcements
 
 These tables are connected using **Primary Keys and Foreign Keys** to ensure **data consistency and integrity**.
 
