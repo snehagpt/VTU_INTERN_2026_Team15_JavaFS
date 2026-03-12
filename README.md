@@ -71,22 +71,6 @@ All APIs are **tested using Postman**.
 
 ---
 
-## 🗓 Development Plan (Sprint 1)
-
-**Sprint Duration:** March 9 – March 13
-
-Tasks:
-
-* Design database schema
-* Create database tables
-* Define primary and foreign key relationships
-* Implement Student and Teacher Signup APIs
-* Develop Login API with role validation
-* Test APIs using Postman
-* Prepare technical documentation
-
----
-
 ## 👥 Team Responsibilities
 
 ### 💾 Backend Database Team
