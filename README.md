@@ -10,33 +10,33 @@ The system allows users to track **attendance, marks, assignments, and academic 
 
 The objective of **EduTrack** is to simplify academic management by providing a digital platform that helps institutions:
 
-* ✔ Track student performance
-* ✔ Maintain academic records efficiently
-* ✔ Improve transparency between students, teachers, and administrators
-* ✔ Reduce manual paperwork and administrative workload
+*  Track student performance
+*  Maintain academic records efficiently
+*  Improve transparency between students, teachers, and administrators
+*  Reduce manual paperwork and administrative workload
 
 ---
 
 ## ⚙️ Tech Stack
 
-* 💻 **Frontend:** React.js
-* 🖥 **Backend:** Spring Boot
-* 🗄 **Database:** MySQL
-* 🧪 **API Testing:** Postman
-* 🔧 **Version Control:** Git & GitHub
+*  **Frontend:** React.js
+*  **Backend:** Spring Boot
+*  **Database:** MySQL
+*  **API Testing:** Postman
+*  **Version Control:** Git & GitHub
 
 ---
 
 ## ⭐ Key Features
 
-* 👤 Student Registration and Login
-* 🔑 Role-Based Access (Student / Teacher / Admin)
-* 📅 Student Attendance Tracking
-* 📊 Marks and Grade Management
-* 📝 Assignment Submission and Tracking
-* 📈 Student Performance Dashboard
-* 📢 Notifications 
-* 🔒 Secure Authentication System
+*  Student Registration and Login
+*  Role-Based Access (Student / Teacher / Admin)
+*  Student Attendance Tracking
+*  Marks and Grade Management
+*  Assignment Submission and Tracking
+*  Student Performance Dashboard
+*  Notifications 
+*  Secure Authentication System
 
 ---
 
@@ -97,11 +97,11 @@ All APIs are **tested using Postman**.
 
 ## 🚀 Future Enhancements
 
-* 📱 Mobile application for students and teachers
-* 🤖 AI-based student performance analysis
-* 👨‍👩‍👧 Parent portal for monitoring student progress
-* 📝 Online exam and result management
-* 📷 Automated attendance using face recognition
+*  Mobile application for students and teachers
+*  AI-based student performance analysis
+*  Parent portal for monitoring student progress
+*  Online exam and result management
+*  Automated attendance using face recognition
 
 ---
 
