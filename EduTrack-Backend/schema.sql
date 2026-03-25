@@ -63,3 +63,12 @@ CREATE TABLE marks (
     FOREIGN KEY (student_id) REFERENCES students(student_id),
     FOREIGN KEY (course_id) REFERENCES courses(course_id)
 );
+
+CREATE TABLE otp_verification (
+    id          BIGINT       NOT NULL AUTO_INCREMENT,
+    email       VARCHAR(100) NOT NULL,
+    otp         VARCHAR(6)   NOT NULL,
+    expiry_time DATETIME     NOT NULL,
+    used        BOOLEAN      NOT NULL DEFAULT FALSE,
+    PRIMARY KEY (id)
+);
