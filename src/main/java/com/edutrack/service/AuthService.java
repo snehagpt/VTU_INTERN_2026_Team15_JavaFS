@@ -7,6 +7,7 @@ import com.edutrack.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +15,7 @@ import java.util.Optional;
 
 @Service
 public class AuthService {
-
+    @Autowired private OtpService otpService;
     @Autowired private StudentRepository studentRepo;
     @Autowired private TeacherRepository teacherRepo;
 
@@ -111,4 +112,47 @@ public class AuthService {
         response.put("role", "teacher");
         return response;
     }
+
+    // ── Reset Student Password ────────────────────────────────
+    @Transactional
+    public boolean resetStudentPassword(String email, String otp, String newPassword) {
+        System.out.println("[AUTH] resetStudentPassword called for email: " + email);
+        Optional<Student> opt = studentRepo.findByEmail(email);
+        if (opt.isEmpty()) {
+            System.out.println("[AUTH] Student not found for email: " + email);
+            return false;
+        }
+
+        if (!otpService.validateOtp(email, otp)) {
+            return false;
+        }
+
+        Student student = opt.get();
+        student.setPassword(encoder.encode(newPassword));
+        studentRepo.save(student);
+        System.out.println("[AUTH] Student password reset successfully for: " + email);
+        return true;
+    }
+
+    // ── Reset Teacher Password ────────────────────────────────
+    @Transactional
+    public boolean resetTeacherPassword(String email, String otp, String newPassword) {
+        System.out.println("[AUTH] resetTeacherPassword called for email: " + email);
+        Optional<Teacher> opt = teacherRepo.findByEmail(email);
+        if (opt.isEmpty()) {
+            System.out.println("[AUTH] Teacher not found for email: " + email);
+            return false;
+        }
+
+        if (!otpService.validateOtp(email, otp)) {
+            return false;
+        }
+
+        Teacher teacher = opt.get();
+        teacher.setPassword(encoder.encode(newPassword));
+        teacherRepo.save(teacher);
+        System.out.println("[AUTH] Teacher password reset successfully for: " + email);
+        return true;
+    }
+
 }
